@@ -1,5 +1,6 @@
-from smartdotenv import env
+from my_dotenv import env
 import os
+import json
 
 def test_env():
     os.environ["TEST_BOOL"] = "true"
@@ -16,3 +17,7 @@ def test_env():
     assert env("TEST_STR") == "hello"
     assert env("TEST_JSON") == {"a": 1, "b": [1, 2, 3]}
     assert env("NON_EXISTENT", "default") == "default"
+
+
+if __name__ == "__main__":
+    test_env()

@@ -12,15 +12,6 @@ def _parse_value(value: str) -> Any:
     if value.lower() in ("true", "false"):
         return value.lower() == "true"
 
-    # List (comma-separated)
-    if "," in value and not value.startswith("["):
-        return [_parse_value(item) for item in value.split(',')]
-
-    # JSON
-    try:
-        return json.loads(value)
-    except (json.JSONDecodeError, TypeError):
-        pass
 
     # Integer
     if value.isdigit():
@@ -32,6 +23,16 @@ def _parse_value(value: str) -> Any:
         return float_val
     except ValueError:
         pass
+
+    # JSON (The order is important: JSON first then List)
+    try:
+        return json.loads(value)
+    except (json.JSONDecodeError, TypeError):
+        pass
+
+    # List (comma-separated)
+    if "," in value and not value.startswith("["):
+        return [_parse_value(item) for item in value.split(',')]
 
     # Fallback to string
     return value
