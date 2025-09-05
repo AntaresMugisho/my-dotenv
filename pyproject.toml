@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "antares-dotenv"
-version = "1.0.0"
+version = "1.0.1"
 description = "A minimal utility to load environment variables with automatic type casting."
 authors = ["Antares Mugisho <antaresmugisho@gmail.com>"]
 license = "MIT"
