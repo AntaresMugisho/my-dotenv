@@ -1,4 +1,4 @@
-from my_dotenv import env
+from antares_dotenv import env
 import os
 import json
 

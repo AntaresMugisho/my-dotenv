@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "my-dotenv"
+name = "antares-dotenv"
 version = "1.0.0"
 description = "A minimal utility to load environment variables with automatic type casting."
 authors = ["Antares Mugisho <antaresmugisho@gmail.com>"]
