@@ -1,4 +1,4 @@
-# Antares-Dotenv
+# antares-dotenv
 
 A minimalistic and developer-friendly way to handle environment variables in Python. Just import `env` and start using it. No more boilerplate code for loading and parsing.
 
@@ -63,7 +63,7 @@ secret_key = env("SECRET_KEY", default="a-very-secret-key")
 print(f"Secret Key: {secret_key}")
 ```
 
-## Why Antares-Dotenv?
+## Why antares-dotenv?
 
 `antares-dotenv` is designed to reduce boilerplate and simplify your code.
 
@@ -91,6 +91,9 @@ hosts = env("ALLOWED_HOSTS")
 ```
 
 `antares-dotenv` automatically handles the type casting for you, making your code cleaner and more readable.
+
+> [!Note]
+> `antares-dotenv` depends on `python-dotenv`
 
 
 *-- For personnal purposes*
